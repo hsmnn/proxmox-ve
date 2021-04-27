@@ -1,4 +1,6 @@
 # Proxmox-ve
+<img src="https://img.shields.io/badge/Build-Failed-red"/>  
+
 This builds a Proxmox VE 6.3 Vagrant basebox.
 
 # Usage
