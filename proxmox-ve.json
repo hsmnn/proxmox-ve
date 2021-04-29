@@ -2,7 +2,7 @@
     "variables": {
       "disk_size": "15375",
       "iso_url": "http://download.proxmox.com/iso/proxmox-ve_6.3-1.iso",
-      "iso_checksum": "5a1becb95ebc48e6eafeb9fa704d1025b8c35dfa1ba28c533dc2ebf15d0a039b"
+      "iso_checksum": "sha256:5a1becb95ebc48e6eafeb9fa704d1025b8c35dfa1ba28c533dc2ebf15d0a039b"
     },
     "builders": [
       {
@@ -21,7 +21,8 @@
         "disk_interface": "virtio-scsi",
         "disk_discard": "unmap",
         "iso_url": "{{user `iso_url`}}",
-        "iso_checksum": "sha256:{{user `iso_checksum`}}",
+        "iso_checksum": "{{user `iso_checksum`}}",
+        "iso_checksum_type": "{{user `iso_checksum_type`}}",
         "ssh_username": "root",
         "ssh_password": "vagrant",
         "ssh_timeout": "60m",
@@ -81,7 +82,7 @@
         "hard_drive_interface": "sata",
         "hard_drive_discard": true,
         "iso_url": "{{user `iso_url`}}",
-        "iso_checksum": "sha256:{{user `iso_checksum`}}",
+        "iso_checksum": "{{user `iso_checksum`}}",
         "ssh_username": "root",
         "ssh_password": "vagrant",
         "ssh_timeout": "60m",
